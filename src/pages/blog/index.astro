@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Card from "../../component/Card.astro";
+
+const  post  = await Astro.glob('./post/*.md')
+---
+
+<BaseLayout title="Blog">
+  <div class="card__container ">
+    {
+    post.map(
+      posts => {
+        const frontmatter = posts.frontmatter
+        return <Card
+        name={frontmatter.titulo}
+        img={frontmatter.img}
+        description={frontmatter.description}
+        url={frontmatter.url}
+        />
+          </div>
+        }
+        )
+      }
+  </div>
+</BaseLayout>
+
+<style>
+  .card__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+  }
+
+</style>

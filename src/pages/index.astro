@@ -1,0 +1,32 @@
+---
+import Hero from "@/component/Hero.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="SJ |Javier Aragon"
+  description="Este es le porftafolio de SuperJ4vi"
+>
+<Hero/>
+  <section>
+    <p>
+      Hola mi nombre es Javier Aragon, Estudiante de la Carrera de Ingenieria en
+      Computacion en la Universidad Tecnoligica de Honduras, me considero
+      Frontend Developer Jr. Soy un apacionado de la tecnologia y de la
+      programación en general. Actualmente elaboro para una institución
+      educativa impartiendo clases de computación para secundaria.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: 2.5rem 5rem;
+    font-family: "Raleway Variable";
+    font-weight: 600;
+  }
+</style>
